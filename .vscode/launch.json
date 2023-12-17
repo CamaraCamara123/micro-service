@@ -1,0 +1,44 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-EreukaServerApplication<ereuka_server>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ma.ensaj.ereuka_server.EreukaServerApplication",
+            "projectName": "ereuka_server",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GateWayApplication<GateWay>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ma.gatway.gateway.GateWayApplication",
+            "projectName": "GateWay",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientApplication<client>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ma.ensaj.client.ClientApplication",
+            "projectName": "client",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-VoitureApplication<voiture>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ma.ensaj.voiture.VoitureApplication",
+            "projectName": "voiture",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
