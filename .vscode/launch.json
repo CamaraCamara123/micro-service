@@ -8,7 +8,8 @@
             "mainClass": "ma.ensaj.ereuka_server.EreukaServerApplication",
             "projectName": "ereuka_server",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=63064 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=ereuka_server"
         },
         {
             "type": "java",
@@ -18,7 +19,8 @@
             "mainClass": "ma.gatway.gateway.GateWayApplication",
             "projectName": "GateWay",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=63077 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=GateWay"
         },
         {
             "type": "java",
@@ -37,6 +39,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "ma.ensaj.voiture.VoitureApplication",
             "projectName": "voiture",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Voiture1Application<voiture1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "ma.projet.voiture1.Voiture1Application",
+            "projectName": "voiture1",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

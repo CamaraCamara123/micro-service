@@ -1,5 +1,6 @@
-package ma.ensaj.voiture;
+package ma.projet.voiture1;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,24 +8,22 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
-import ma.ensaj.voiture.entities.Client;
-import ma.ensaj.voiture.entities.Voiture;
-import ma.ensaj.voiture.repositories.VoitureRepository;
-import ma.ensaj.voiture.services.ClientService;
+import ma.projet.voiture1.entities.Client;
+import ma.projet.voiture1.entities.Voiture;
+import ma.projet.voiture1.repositories.VoitureRepository;
+import ma.projet.voiture1.services.ClientService;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients(basePackages = "ma.ensaj.voiture.services")
-public class VoitureApplication {
-
+@EnableFeignClients(basePackages = "ma.projet.voiture1.services")
+public class Voiture1Application {
 	public static void main(String[] args) {
-		SpringApplication.run(VoitureApplication.class, args);
+		SpringApplication.run(Voiture1Application.class, args);
 	}
 
 	@Bean
-	CommandLineRunner initialiserBaseH2(VoitureRepository voitureRepository,
-			ClientService clientService) {
-
+	CommandLineRunner initialiserBaseH2(VoitureRepository voitureRepository,@Autowired ClientService clientService) {
+			
 		return args -> {
 			Client c1 = clientService.clientById(2L);
 			Client c2 = clientService.clientById(1L);
@@ -44,4 +43,5 @@ public class VoitureApplication {
 					"A 55 4444", "301", 2L, c1));
 		};
 	}
+
 }
