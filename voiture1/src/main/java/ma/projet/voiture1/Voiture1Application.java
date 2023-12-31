@@ -34,7 +34,7 @@ public class Voiture1Application {
 			System.out.println("**************************");
 			System.out.println("Id est :" + c1.getId());
 			System.out.println("Nom est :" + c1.getNom());
-			System.out.println("Nom est :" + c1.getAge());
+			System.out.println("Age est :" + c1.getAge());
 			System.out.println("**************************");
 			voitureRepository.save(new Voiture(Long.parseLong("1"), "Toyota", "A25 333", "Corolla", 1L, c2));
 			voitureRepository.save(new Voiture(Long.parseLong("2"), "Renault",
